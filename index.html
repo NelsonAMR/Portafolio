@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/menu.js"></script>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Playfair+Display:wght@700&family=Raleway:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Nelson Macias - Frontend Developer</title>
+</head>
+<body class="hidden">
+    <div class="center" id="onload">
+        <div class="lds-facebook"><div></div><div></div><div></div></div>
+    </div>
+    <header id="inicio">
+        <nav class="nav1" id="nav">
+            <div class="cont-nav">
+                <div class="logo">
+                    <!-- <img src="res/img/logo.png" alt="logo"> -->
+                    <a href="#inicio"><span>N</span>elson  <span>M</span>acias</a>
+                </div>
+                <div class="enlaces" id="enlaces">
+                    <a href="#inicio" class="btn-header" id="init">Inicio</a>
+                    <a href="#sobre" class="btn-header" id="about">Sobre</a>
+                    <a href="#habilidades" class="btn-header" id="skills">Habilidades</a>
+                    <a href="#proyectos" class="btn-header" id="proyects">Proyectos</a>
+                    <a href="#contacto" class="btn-header" id="contact">Contacto</a>
+                </div>
+                <div class="icono" id="open">
+                    <span id="icon">&#9776;</span>
+                </div>
+            </div>
+        </nav>
+        <div class="textos">
+            <h1>Nelson Macias</h1>
+            <h2>Frontend Developer</h2>
+        </div>
+    </header>
+    
+    <main>
+        <section class="contenedor after" id="sobre">
+            <div class="sobre">
+                <div>
+                    <h3>Sobre Mi</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro explicabo necessitatibus, ex, quas voluptates cupiditate repellat delectus rem qui ipsam optio magnam debitis adipisci aspernatur recusandae dicta sint nulla pariatur id omnis, illum totam aut! Fugit iste reprehenderit officia esse temporibus nam assumenda atque accusantium. Facilis, repellendus? Et, itaque amet.</p>
+                </div>
+                <div class="me">
+                    <img src="res/img/me.svg" alt="yo">
+                </div>
+            </div>
+        </section>
+        <section class="habilidades color2" id="habilidades">
+            <div class="contenedor">
+                <h3>Mis Habilidades</h3>
+                <p class="after">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, possimus!</p>
+                <div class="habilidad">
+                    <img src="res/img/html.png" alt="html">
+                    <img src="res/img/css.png" alt="css">
+                    <img src="res/img/js.png" alt="javascript">
+                    <img src="res/img/sass.png" alt="sass">
+                </div>
+            </div>
+        </section>
+
+        <section class="proyectos contenedor" id="proyectos">
+            <h3>Mis Proyectos</h3>
+            <p class="after">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, possimus!</p>
+            <div class="proyecto">
+                <div class="proyect">
+                    <a href="../Web/GeneradorQR/index.html"> <img src="res/img/pro-qr.PNG" alt="proyecto codigo qr"></a>
+                </div>
+                <div class="proyect">
+                    <img src="res/img/pro-qr.PNG" alt="proyecto codigo qr">
+                </div>
+                <div class="proyect">
+                    <img src="res/img/pro-qr.PNG" alt="proyecto codigo qr">
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="color2" id="contacto">
+        <div class="footer contenedor">
+            <div class="logo">
+                <!-- <img src="res/img/logo.png" alt="logo"> -->
+                <a href="#inicio"><span>N</span>elson  <span>M</span>acias</a>
+            </div>
+
+            <div class="redes">
+                <img src="res/img/email.svg" alt="email">
+                <img src="res/img/github.svg" alt="github">
+                <img src="res/img/whatsapp.svg" alt="whatsapp">
+            </div>
+
+            <p class="frase">Frase super mega inspiradora.</p>
+        </div>
+    </footer>
+</body>
+</html>
