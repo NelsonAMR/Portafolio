@@ -3,8 +3,8 @@ $(document).ready(function(){
     let nav = document.getElementById('nav');
     let menu = document.getElementById('enlaces');
     let open = document.getElementById('open');
-    let btn = document.getElementsByClassName('btn-header');
     let close = true;
+    let git = document.getElementById('iGit');
 
     function menus(){
         let dist = window.pageYOffset;
@@ -27,8 +27,8 @@ $(document).ready(function(){
             close = false;
         }else{
             menu.style.width = '0%';
-            close = true;
             menu.style.overflow = 'hidden';
+            close = true;
         }
     }
 
@@ -65,5 +65,9 @@ $(document).ready(function(){
     open.addEventListener('click', function(){
         opener();
     });
+
+    git.addEventListener('click', function(){
+        window.open('https://github.com/NelsonAMR');
+    })
 
 });
