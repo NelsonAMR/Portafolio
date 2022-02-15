@@ -1,7 +1,7 @@
 :root {
-  --color1: rgba(105, 190, 138, 0.788);
+  --color1: #139dff;
   --color2: #46aef7;
-  --color3: #2c3e50;
+  --color3: #193653;
   --fondo: #f2f2f2;
   --titulo: 3.3rem;
   --subtitulo: 2rem;
@@ -133,7 +133,7 @@ nav{
 .enlaces a{
     display: inline-block;
     padding: 0.5rem 0;
-    margin-right: 1rem;
+    margin-right: 2rem;
     font-size: 2rem;
     font-weight: 300;
     text-decoration: none;
@@ -245,7 +245,11 @@ nav{
 }
 
 .color2{
-    background-color: var(--color2);
+    /* background-color: var(--color2); */
+    background: linear-gradient(to bottom, #16d9e3c5 0%, #30c6ecc6 47%, #46adf7c7 100%), url(../res/img/header.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
     height: auto;
     color: #fff;
 }
@@ -278,20 +282,32 @@ nav{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
+    justify-items: center;
+}
+
+.proyect{
+    width: 100%;
+    height: 100%;
 }
 
 .proyecto img{
-    width: 100%;
+    width: 87.5%;
+    height: 100%;
+    border-radius: 0.75rem;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.5);
     object-fit: cover;
+    cursor: pointer;
+    transition: 0.5s;
 }
 
 .proyecto img:hover{
-    cursor: pointer;
+    transform: scale(1.1);
 }
 
 .footer{
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .footer .logo{
@@ -306,18 +322,18 @@ nav{
 .redes{
     display: flex;
     justify-content: space-around;
-    width: 100%;
+    width: 50%;
     margin: 5rem 0;
 }
 
 .redes img{
     height: 6rem;
     cursor: pointer;
+    transition: 0.2s;
 }
 
 .redes img:hover{
-    height: 5.5rem;
-    transition: 0.1s;
+    transform: scale(1.15);
 }
 
 .redes img:active{
@@ -402,25 +418,25 @@ nav{
         --espacio-cont: 2.5rem;
     }
 
+    .proyecto{
+        display: flex;
+        flex-direction: column;    
+    }
+
     .habilidad{
         grid-template-columns: repeat(2, 1fr);
         row-gap: 3rem;
     }
     
     .habilidad img{
-        height: 15rem;
-    }
-
-    .proyecto{
-        display: flex;
-        flex-direction: column;    
+        height: 10rem;
     }
 
     .footer .logo{
-        font-size: 10rem;
+        font-size: 7.5rem;
     }
 
     .redes{
-        margin: auto;
+        width: 90%;
     }
 }
