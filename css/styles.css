@@ -455,16 +455,6 @@ nav{
         flex-wrap: wrap; 
         justify-content: center;
     }
-
-    .red:hover{
-        border-color: #fff;
-        color: #fff;
-    }
-    
-    .red:active{
-        border-color: var(--color3);
-        color: var(--color3);
-    }
 }
 
 @media screen and (max-width: 550px){
