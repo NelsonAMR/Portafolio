@@ -44,7 +44,7 @@ h1, h2, h3{
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1;
+    z-index: 2;
 }
 
 .lds-facebook {
@@ -105,6 +105,7 @@ nav{
     width: 100%;
     position: fixed;
     box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.5);
+    z-index: 1;
 }
 
 .nav1{
@@ -163,7 +164,7 @@ nav{
 
 .logo a{
     text-decoration: none;
-    color: rgba(0, 0, 0, 0.75);
+    color: var(--color3)
 }
 
 .icono{
@@ -187,12 +188,35 @@ nav{
 .textos h1{
     font-size: 8rem;
     margin: 2rem;
+    animation: sliding 1.5s;
+    overflow: hidden;
+}
+
+@keyframes sliding{
+    from{
+        transform: translateX(-150%);
+    }
+
+    to {
+        transform: translateX(0%);       
+    }
 }
 
 .textos h2{
     font-size: 3rem;
     font-weight: 300;
     margin: 1rem;
+    animation: sliding-inv 1.5s;
+}
+
+@keyframes sliding-inv{
+    from{
+        transform: translateX(150%);
+    }
+
+    to {
+        transform: translateX(0%);       
+    }
 }
 
 /***** MAIN *****/
@@ -332,12 +356,32 @@ nav{
     transition: 0.2s;
 }
 
-.redes img:hover{
-    transform: scale(1.15);
+.red{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 15rem;
+    border: 0.15rem solid #fff;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    font-size: 2.25rem;
+    transition: 0.5s;
+    cursor: pointer;
+    margin: 1rem;
 }
 
-.redes img:active{
-    height: 6rem;
+.red i{
+    font-size: 5rem;
+}
+
+.red:hover{
+    border-color: var(--color3);
+    color: var(--color3);
+}
+
+.red:active{
+    border-color: #fff;
+    color: #fff;
 }
 
 @media screen and (max-width: 800px) {
@@ -411,9 +455,19 @@ nav{
         flex-wrap: wrap; 
         justify-content: center;
     }
+
+    .red:hover{
+        border-color: #fff;
+        color: #fff;
+    }
+    
+    .red:active{
+        border-color: var(--color3);
+        color: var(--color3);
+    }
 }
 
-@media screen and (max-width: 500px){
+@media screen and (max-width: 550px){
     :root{
         --espacio-cont: 2.5rem;
     }
@@ -438,5 +492,18 @@ nav{
 
     .redes{
         width: 90%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .red{
+        width: 20rem;
+        padding: 1rem;
+        font-size: 2.5rem;
+    }
+
+    .red i{
+        font-size: 6rem;
     }
 }

@@ -5,6 +5,8 @@ $(document).ready(function(){
     let open = document.getElementById('open');
     let close = true;
     let git = document.getElementById('iGit');
+    let email = document.getElementById('iEmail');
+    let correo = 'mailto:nelson.macias99@gmail.com';
 
     function menus(){
         let dist = window.pageYOffset;
@@ -70,4 +72,7 @@ $(document).ready(function(){
         window.open('https://github.com/NelsonAMR');
     })
 
+    email.addEventListener('click', function(){
+        window.open('mailto:nelson.macias99@gmail.com', 'emailWindow');
+    });
 });
