@@ -3,6 +3,7 @@ $(document).ready(function(){
     let nav = document.getElementById('nav');
     let menu = document.getElementById('enlaces');
     let open = document.getElementById('open');
+    let hab = document.getElementsByClassName('hab');
     let close = true;
     let git = document.getElementById('iGit');
     let email = document.getElementById('iEmail');
@@ -64,6 +65,27 @@ $(document).ready(function(){
         }
     });
 
+    for(let i = 0; i < hab.length; i++){
+        if(screen.width >= 800){
+            hab[i].addEventListener('mouseover', function(){
+                let skill = document.getElementById(`hab${i+1}`);
+                skill.classList.remove('hide');
+            });
+
+            hab[i].addEventListener('mouseout', function(){
+                let skill = document.getElementById(`hab${i+1}`);
+                skill.classList.add('hide');
+            });
+        }
+
+        else{
+            hab[i].addEventListener('click', function(){
+                let skill = document.getElementById(`hab${i+1}`);
+                skill.classList.toggle('hide');
+            });
+        }
+    }
+
     open.addEventListener('click', function(){
         opener();
     });
@@ -73,6 +95,6 @@ $(document).ready(function(){
     })
 
     email.addEventListener('click', function(){
-        window.open('mailto:nelson.macias99@gmail.com', 'emailWindow');
+        window.open(correo, 'emailWindow');
     });
 });
