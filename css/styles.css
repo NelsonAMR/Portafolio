@@ -3,8 +3,8 @@
   --color2: #46aef7;
   --color3: #193653;
   --fondo: #f2f2f2;
-  --titulo: 3.3rem;
-  --subtitulo: 2rem;
+  --titulo: 3.75rem;
+  --subtitulo: 2.25rem;
   --margen: 6rem;
   --espacio: 1rem;
   --espacio-cont: 4.5rem;
@@ -19,7 +19,7 @@
 
 html {
   box-sizing: border-box;
-  font-size: 95%;
+  font-size: 70%;
 }
 
 body {
