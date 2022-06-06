@@ -19,7 +19,7 @@
 
 html {
   box-sizing: border-box;
-  font-size: 62.5%;
+  font-size: 95%;
 }
 
 body {
@@ -135,7 +135,7 @@ nav{
     display: inline-block;
     padding: 0.5rem 0;
     margin-right: 2rem;
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: 300;
     text-decoration: none;
     border-bottom: 0.3rem solid transparent;
@@ -144,7 +144,7 @@ nav{
 
 .enlaces a:hover{
     border-bottom: 0.3rem solid var(--color3);
-    transition: 1s;
+    transition: 500ms;
 }
 
 .logo{
@@ -251,6 +251,8 @@ nav{
     margin-bottom: var(--espacio-cont);
 } */
 
+/******* SOBRE MI ******************/
+
 .sobre{
     display: grid;
     grid-template-columns: 3fr 1fr;
@@ -320,6 +322,7 @@ nav{
 }
 
 .proyecto{
+    margin-top: 5rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
@@ -362,10 +365,13 @@ nav{
     transform: scale(1.1);
 }
 
+/************ FOOTER ****************/
+
 .footer{
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 2rem;
 }
 
 .footer .logo{
@@ -418,7 +424,37 @@ nav{
     color: #fff;
 }
 
-@media screen and (max-width: 800px) {
+/************* RESPONSIVE ***************/
+@media (max-width: 1100px){
+    .enlaces a{
+        font-size: 1.5rem;
+        border-bottom: 0.2rem solid transparent;
+    }
+
+    .enlaces a:hover{
+        border-bottom: 0.2rem solid var(--color3);
+    }
+
+    .logo{
+        font-size: 3rem;
+    }
+
+    .sobre{
+        display: block;
+        text-align: center;
+    }
+
+    .red{
+        padding: 1rem 0;
+        font-size: 2rem;
+    }
+
+    .red i{
+        font-size: 3.5rem;
+    }
+}
+
+@media screen and (max-width: 900px) {
     :root{
         --margen: 3rem;
         --titulo: 4.3rem;
@@ -453,13 +489,13 @@ nav{
         display: flex;
         flex-direction: column;
         width: 100%;
-        height: 5rem;
-        padding: 5rem;
+        height: 4rem;
+        padding: 4rem;
         justify-content: center;
         align-items: center;
         background-color: #34495e;
         color: #fff;
-        font-size: 3rem;
+        font-size: 2rem;
     }
 
     .enlaces a:hover{
@@ -483,17 +519,38 @@ nav{
         height: 10rem;
     }
     
-
     .proyecto{
         display: flex;
         flex-wrap: wrap; 
         justify-content: center;
     }
+
+    .redes{
+        width: 40rem;
+    }
+
+    .red{
+        padding: 1.2rem 0;
+        font-size: 2rem;
+    }
+
+    .red i{
+        font-size: 4rem;
+    }
+
+    .footer p{
+        font-size: 1.75rem;
+    }
 }
 
 @media screen and (max-width: 550px){
     :root{
-        --espacio-cont: 2.5rem;
+        --titulo: 3.2rem;
+        --subtitulo: 2rem;
+    }
+
+    .textos h1{
+        font-size: 6rem;
     }
 
     .proyecto{
@@ -502,16 +559,17 @@ nav{
     }
 
     .habilidad{
+        margin-top: 4rem;
         grid-template-columns: repeat(2, 1fr);
         row-gap: 3rem;
     }
     
     .habilidad img{
-        height: 10rem;
+        height: 8rem;
     }
 
     .footer .logo{
-        font-size: 7.5rem;
+        font-size: 5rem;
     }
 
     .redes{
